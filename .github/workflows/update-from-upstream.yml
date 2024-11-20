@@ -25,7 +25,8 @@ jobs:
 
       - name: 恢复本地的 GitHub Actions 配置
         run: |
-          git checkout HEAD@{1} -- .github/workflows
+          git reset HEAD -- .github/workflows
+          git checkout -- .github/workflows
 
       - name: 推送更新到origin
         run: |
