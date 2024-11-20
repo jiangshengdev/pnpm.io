@@ -21,7 +21,7 @@ jobs:
         run: |
           git remote add upstream https://github.com/pnpm/pnpm.io.git
           git fetch upstream main
-          git merge upstream/main --allow-unrelated-histories
+          git merge upstream/main --allow-unrelated-histories -X theirs
 
       - name: 推送更新到origin
         run: |
