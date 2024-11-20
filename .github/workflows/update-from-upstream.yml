@@ -23,6 +23,10 @@ jobs:
           git fetch upstream main
           git merge upstream/main --allow-unrelated-histories -X theirs
 
+      - name: 恢复本地的 GitHub Actions 配置
+        run: |
+          git checkout HEAD@{1} -- .github/workflows
+
       - name: 推送更新到origin
         run: |
           git push origin main
