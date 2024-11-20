@@ -10,7 +10,7 @@ jobs:
       - name: 检出代码
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          persist-credentials: true
 
       - name: 设置Git用户信息
         run: |
